@@ -1,25 +1,15 @@
-const express = require('express');
+const express = require("express");
+const usuarioRouter = require("./routes/usuario.routes");
 const app = express();
-app.use(express.static('public'));
 
+app.set("view engine", "ejs");
 
-app.listen(3000, ()=>{
-    console.log('Servidor funcionando');
-});
+app.use("/", usuarioRouter);
+app.use("/productos", usuarioRouter);
+app.use("/listado", usuarioRouter);
+app.use("/detalle", usuarioRouter);
+app.use("/login", usuarioRouter);
 
-app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/views/home.html');
-});
-
-app.get('/carrito', (req,res)=>{
-    res.sendFile(__dirname + '/views/productCart.html');
-});
-
-
-app.get('/registro', (req,res)=>{
-    res.sendFile(__dirname + '/views/registro.html');
-});
-
-app.get('/producto', (req,res)=>{
-    res.sendFile(__dirname + '/views/producto.html');
+app.listen(3030, () => {
+  console.log("aplicacion corriendo en el puerto 3030");
 });
