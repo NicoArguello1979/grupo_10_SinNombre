@@ -11,18 +11,15 @@ app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/home.html');
 });
 
-app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
+app.get('/carrito', (req,res)=>{
+    res.sendFile(__dirname + '/views/productCart.html');
 });
 
-app.post('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/home.html');
+
+app.get('/registro', (req,res)=>{
+    res.sendFile(__dirname + '/views/registro.html');
 });
 
-app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
-});
-
-app.post('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/home.html');
+app.get('/producto', (req,res)=>{
+    res.sendFile(__dirname + '/views/producto.html');
 });

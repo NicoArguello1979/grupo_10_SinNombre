@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    
+}
+
+
+.header nav{
+    background-color: #222222;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+
+
+.logo{
+    width: 100%;
+    max-height: 10%;
+
+}
+
+.nav-bar ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    padding: 5px 0px;
+    justify-content: space-around;
+    
+}
+
+
+
+.hamburguesa{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 18px;   
+}
+
+.carrito{
+    color: white;
+    font-size: 18px;
+}
+
+
+.articulo{
+    padding: 20px
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor #img{
+    width: 100%;
+}
+
+.contenedor .scroll{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+}
+
+.contenedor .scroll img{
+    max-height: 100%;
+}
+
+.descripcion h2{
+    margin-bottom: 0px;
+}
+
+.descripcion #disponible{
+    color: greenyellow;
+    margin-top: 0px;
+}
+
+.similares p{
+    margin: 0px;
+    padding: 10px;
+    border: black 2px solid;
+    background-color: rgb(130, 130, 247);
+    border-radius: 7px;
+    width: 90px;
+}
+
+.similares{
+    display: none;
+    margin: 0px;
+}
+
+.descripcion .boton{
+    align-items: center;
+}
+
+
+.footer{
+    text-align: center;
+    background-color: #222222;
+    color: white
+}
+
+.footer div{
+    padding: 10px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.footer h1{
+    font-size:18px;
+    padding-top: 20px
+}
+
+.footer a{
+    color:white
+}
+
+
+@media(min-width:600px){
+    .contenedor{
+        flex-direction: row;
+    }
+
+    .contenedor .scroll{
+        order: -1;
+        flex-direction: column;
+        width: 15%;
+    }
+
+    .contenedor .scroll img{
+        width: 100%;
+    }
+
+    .contenedor #img{
+        width: 60%;
+    }
+
+    .contenedor .descripcion{
+        width: 25%;
+    }
+
+    .similares{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 1000px){
+    .articulo{
+        max-width: 1000px;
+        margin: auto;
+        border-left: solid 1px #222222;
+        border-right: solid 1px #222222;
+    }
+   
+}
